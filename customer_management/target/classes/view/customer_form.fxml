@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.CustomerFormController">
+   <children>
+      <Label layoutX="190.0" layoutY="38.0" text="Customer Manage">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtID" layoutX="51.0" layoutY="105.0" prefHeight="38.0" prefWidth="204.0" promptText="id" />
+      <TextField fx:id="txtName" layoutX="327.0" layoutY="105.0" prefHeight="38.0" prefWidth="204.0" promptText="name" />
+      <TextField fx:id="txtAddress" layoutX="51.0" layoutY="188.0" prefHeight="38.0" prefWidth="204.0" promptText="address" />
+      <TextField fx:id="txtTele" layoutX="327.0" layoutY="188.0" prefHeight="38.0" prefWidth="204.0" promptText="tel" />
+      <JFXButton buttonType="RAISED" layoutX="441.0" layoutY="269.0" onAction="#btnSaveOnAction" prefHeight="30.0" prefWidth="89.0" style="-fx-background-color: #3498db;" text="Save">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblCustomer" layoutX="53.0" layoutY="326.0" prefHeight="259.0" prefWidth="481.0">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="110.4000244140625" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="114.39996337890625" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="116.800048828125" text="Address" />
+            <TableColumn fx:id="colTele" prefWidth="140.7999267578125" text="Telephone" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
